@@ -1,0 +1,11 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: plan
+  image: cmdlabs/terraform-utils
+  commands:
+  - terraform init examples
+  - terraform plan examples
